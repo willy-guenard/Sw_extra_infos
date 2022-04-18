@@ -3,3 +3,5 @@ Lib
 Scripts
 pyvenv.cfg
 src/__pycache__
+D3DShot-dev
+src/Rune/__pycache__
