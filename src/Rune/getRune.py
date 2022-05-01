@@ -1,22 +1,14 @@
-from PIL import Image
-from Rune.runeClass import Rune
-from Rune.windowsRune import showWindows
-from Rune.screanshotgames import getRuneShow
+def get_infos_rune(dataAeraGames):
+    screanshotRune = get_screan_rune(dataAeraGames)
 
-# detailleRune = ("Type", "Slot", "Upgrade", "Main Stat", "Init Stat", "1 Sub Stat", "2 Sub Stat", "3 Sub Stat", "4 Sub Stat")
+    rune = Rune(screanshotRune)
 
-def getDataToRune():
-    
-    imageWindow = getRuneShow()
+    rune.calculate_Rating()
+    rune.show_Rating()
 
-    # test images
-    imageWindow = Image.open('.\Stock_image\windows.png')
+def get_screan_rune ():
+    get_aera_rune()
+    pass
 
-    # recuperation taille fenetre rune
-    rune_image = imageWindow.crop((1450, 30, 2485, 705)) # possition top right
-
-
-    runeData = Rune(rune_image)
-    showWindows(runeData)
-
-
+def get_aera_rune():
+    pass
